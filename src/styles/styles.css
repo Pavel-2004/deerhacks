@@ -1,6 +1,9 @@
 
 .grades-menu {
-    text-align: center;
+    text-align: left;
+    padding: 1.5em;
+    background: #93E5AB;
+    height: 100vh;
 }
 
 .grades-menu > h1 {
@@ -12,16 +15,16 @@
 .course-name {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    margin: 1em;
+    align-items: left;
+    margin: 1em 0;
 }
 
 .course-name > h2 {
     font-size: 1.5rem;
+    margin-bottom: .5em;
     font-weight: bold;
-    text-align: center;
-    color: #4e878c;
+    text-align: left;
+    color: #00241B;
 }
 
 
@@ -29,19 +32,18 @@
     display: flex;
     flex-direction: row;
     gap: 1em;
-    margin: 1em;
 }
 
 .grade-card {
-    background: #93e5ab;
+    background: #65B891;
     padding: 1em;
-    border: 1px solid black;
     border-radius: 1em;
     text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .grade-card > h3 {
     font-size: 1.2rem;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
