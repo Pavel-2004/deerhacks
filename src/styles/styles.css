@@ -1,0 +1,54 @@
+.assignment-menu > h1 {
+    text-align: left;
+    font-size: 2.5rem;
+    padding: 0;
+    color: #4e878c;
+    font-weight: 500;
+}
+
+.assignment-menu {
+    margin: 1em;
+
+}
+
+.section-whole {
+    margin-top: 1em;
+    border-radius: 1em;
+    padding: 1.5em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.section-whole > h2 {
+    font-size: 1.5rem;
+    padding: 0;
+    color: #00241b;
+    font-weight: 700;
+}
+
+.section-card {
+    width: 90%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.assignment-card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin: .5em;
+    padding: 1em;
+    border-radius: .5em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.assignment-card > h3 {
+    font-size: 1.2rem;
+    margin-bottom: .25em;
+    text-decoration: underline;
+}
