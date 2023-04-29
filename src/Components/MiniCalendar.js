@@ -139,7 +139,7 @@ import React, { useState } from "react";
           ) : (
             <>
               <div className="Month">
-                <h1>{date.toLocaleString('default', { month: 'long' })} {day} {year}</h1>
+                <h1>{date.toLocaleString('default', { month: 'long' })} {day}, {year}</h1>
               </div>
 
               <div className="Buttons">
