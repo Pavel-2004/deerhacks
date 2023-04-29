@@ -1,26 +1,29 @@
 
 
 .skills-menu {
-    margin: 1em 2em;
+    padding: 1em 2em;
+    background: #00241b;
 }
 
 .skills-menu h1 {
     font-size: 2em;
-    text-decoration: underline;
+    font-weight: 700;
     margin: 0;
     padding: 0;
-    color: #4e878c;
+    color: #b5ffe1;
 }
 
 .skills-section {
     margin: 1em 0;
     border-radius: 1em;
     padding: 1.5em;
+    background: rgb(233, 233, 233);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .skills-section h2 {
     font-size: 1.5em;
+    font-weight: 500;
     margin: 0;
     padding: 0;
     color: #00241b;
