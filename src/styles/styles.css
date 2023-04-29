@@ -1,0 +1,47 @@
+
+.grades-menu {
+    text-align: center;
+}
+
+.grades-menu > h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00241b;
+}
+
+.course-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 1em;
+}
+
+.course-name > h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #4e878c;
+}
+
+
+.grades-for-course {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin: 1em;
+}
+
+.grade-card {
+    background: #93e5ab;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+    text-align: left;
+}
+
+.grade-card > h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
