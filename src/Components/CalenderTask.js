@@ -1,32 +1,9 @@
 import React, { useState } from "react";
 
-/**
- Using the date object find how much days there are in a month (that is being displayed) and find out 
- under which day i.e monday, tuesday,… the first and last fall under. 
- 
- Construct the calendar using a table and format the dates how a regular calender would have i.e the 
- first of May 2023 falls on a monday and the 31st falls on a friday. 
- 
- Using tailwind map out all of the valid days in the display by using flex col to create 4 rows and using 
- flex-row for create 7 day and each week. 
- 
- We will also provide you with a list of JSON (dictionaries) showing  stored in the following format: 
- {startDate: string date and time, time: float, taskName, taskType, skills: []} while we are working on 
- an API create just a dummy variable which contains this and work around it. 
- 
- Display all tasks that need to be done that day in the calendar format but only short bits for every day 
- possible so that the UI stays clean. 
- 
- Once clicking on one of these tasks create a small pop up menu over the screen that shows all the task 
- details.
- */
-
  export const CalenderTask = () => {
     const [date, setDate] = useState(new Date());
-    // const [selectedDate, setSelectedDate] = useState(new Date());
 
     const [selectedTask, setSelectedTask] = useState(null);
-
 
     const [tasks, setTasks] = useState([
         {
