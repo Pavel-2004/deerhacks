@@ -13,7 +13,7 @@ export default function handler(req, res) {
             && section
         )
         {
-            workflow.emit("findUser")
+            workflow.emit("addToSection")
         }
         else {
             workflow.emit("error", "bad params")
@@ -27,7 +27,7 @@ export default function handler(req, res) {
         })  
         .catch(err => {
             workflow.emit("error", err.message)
-        }
+        })
         return res.status(200).json({message})
     })
     
