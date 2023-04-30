@@ -1,3 +1,59 @@
+.assignment-menu > h1 {
+    text-align: left;
+    font-size: 2.5rem;
+    padding: 0;
+    color: #00241B;
+    font-weight: 500;
+}
+
+.assignment-menu {
+    padding: 1em;
+    background: #93E5AB;
+}
+
+.section-whole {
+    margin-top: 1em;
+    border-radius: 1em;
+    padding: 1.5em;
+    background-color: #65B891;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.section-whole > h2 {
+    font-size: 1.5rem;
+    padding: 0;
+    color: #00241b;
+    font-weight: 700;
+}
+
+.section-card {
+    width: 90%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.assignment-card {
+    color: #00241B;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin: .5em;
+    padding: 1em;
+    border-radius: .5em;
+    background-color: #B5FFE1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.assignment-card > h3 {
+    font-size: 1.2rem;
+    margin-bottom: .25em;
+    font-weight: 500;
+}
+
 .grades-menu {
     text-align: left;
     padding: 1.5em;
@@ -72,4 +128,3 @@
     cursor: pointer;
     background: lightgray;
 }
-
