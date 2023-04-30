@@ -2,6 +2,7 @@
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from "../../../firebase";
 import EventEmitter from 'events';
+
 const workflow = new EventEmitter();
 
 export default function post_assignment(req, res) {
@@ -10,6 +11,12 @@ export default function post_assignment(req, res) {
     const dueDate = req.body.dueDate
     const section = req.body.section
 
+    workflow.once("checkParams", () => {
+        if ( assigmentName && description && dueDate && section ) {
+            workflow.emit("createAssignment")
+        }
+        else { workflow.emit("error") }
+    })
 
     workflow.once("createAssignment", () => {
         addDoc(collection(db, "assignments"), { assigmentName, description, dueDate, section })
@@ -29,5 +36,5 @@ export default function post_assignment(req, res) {
         return res.status(200).json({message})
     })
 
-    workflow.emit("createAssignment")
+    workflow.emit("checkParams")
 }
