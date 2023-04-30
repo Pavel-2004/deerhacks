@@ -81,19 +81,19 @@ export default function StudentToSection() {
 
 
   return (
-    <div>
+    <div className={"justify-center bg-[#B5FFE1] p-1 pl-3"}>
       {
         sections.map(section => {
           return (
             <>
-              <p>{section.name}</p>
+              <p className={"my-2 font-bold text-3xl text-[#00241B]"} >{section.name}</p>
               {
                 students.map(student => {
                   if (!student.sections.includes(section.id)) {
                     return (
-                      <div className={"flex flex-row"}>
-                        <p className={"flex flex-1"}>{student.email}</p>
-                        <button className={"flex"} onClick={() => handleAddStudent(section.id, student.id)}>Add</button>
+                      <div className={"flex flex-row justify-left my-1"}>
+                        <p className={"flex flex-1 text-[#00241B]"}>{student.email}</p>
+                        <button className={"bg-[#65B891] ml-4 rounded-lg text-[#00241B] py-1 px-2 text-center font-bold cursor-pointer"} onClick={() => handleAddStudent(section.id, student.id)}>Add</button>
                       </div>
                     )
                   }
@@ -103,9 +103,9 @@ export default function StudentToSection() {
           )
         })
       }
-      <div className={"flex flex-row"}>
-        <input value={name} onChange={e => setName(e.target.value)} placeholder={"Section Name"} />
-        <button onClick={handleCreateSection}></button>
+      <div className={"flex flex-row my-4"}>
+        <input className={"pl-1"}value={name} onChange={e => setName(e.target.value)} placeholder={"Section Name"} />
+        <button className={"bg-[#65B891] ml-4 rounded-lg text-[#00241B] p-2 text-center font-bold cursor-pointer"} onClick={handleCreateSection}>Create</button>
       </div>
     </div>
   )
