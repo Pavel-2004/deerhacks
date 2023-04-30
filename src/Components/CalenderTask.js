@@ -107,65 +107,65 @@ import React, { useState } from "react";
 
     const taskOpenHandler = (task) => {
         setSelectedTask(task);
-      };
+    };
       
-      return (
-        <div className="All">
-          {selectedTask ? (
-            <div className="TaskMenu">
-              <p className="TaskName">Task Name: {selectedTask.taskName}</p>
-              <p className="TaskType">Task Type: {selectedTask.taskType}</p>
-              <p className="TaskSkills">Skills: {selectedTask.skills.join(", ")}</p>
-              <p className="TaskStart">Start Date: {selectedTask.startDate}</p>
-              <p className="TaskTime">Time: {selectedTask.time}</p>
-              <button className="TaskBack" onClick={() => setSelectedTask(null)}>Close</button>
+    return (
+      <div className="All">
+        {selectedTask ? (
+          <div className="TaskMenu">
+            <p className="TaskName">Task Name: {selectedTask.taskName}</p>
+            <p className="TaskType">Task Type: {selectedTask.taskType}</p>
+            <p className="TaskSkills">Skills: {selectedTask.skills.join(", ")}</p>
+            <p className="TaskStart">Start Date: {selectedTask.startDate}</p>
+            <p className="TaskTime">Time: {selectedTask.time}</p>
+            <button className="TaskBack" onClick={() => setSelectedTask(null)}>Close</button>
+          </div>
+        ) : (
+          <>
+            <div className="Month">
+              <h1>{date.toLocaleString('default', { month: 'long' })} {year}</h1>
             </div>
-          ) : (
-            <>
-              <div className="Month">
-                <h1>{date.toLocaleString('default', { month: 'long' })} {year}</h1>
-              </div>
-              <div className="DaysWeek">
-                {days.map(day => <div className="EachDay">{day}</div>)}
-              </div>
-              <div className="Calendar">
-                {Array.from({ length: Math.ceil(daysInMonthWithPadding.length / 7) }).map((_, weekIndex) => (
-                <>
-                  <div key={weekIndex} className="Week">
-                    {daysInMonthWithPadding.slice(weekIndex * 7, (weekIndex + 1) * 7).map((day, dayIndex) => (
-                      <div key={dayIndex} className="Days">
-                        <p>{day}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="Week">
-                    {daysInMonthWithPadding.slice(weekIndex * 7, (weekIndex + 1) * 7).map((day, dayIndex) => (
-                      <div key={dayIndex} className="Tasks">
-                        {tasks.map((task, taskIndex) => {
-                          const taskDate = new Date(task.startDate).getDate();
-                          if (taskDate === day && month == new Date(task.startDate).getMonth() && year == new Date(task.startDate).getFullYear()) {
-                            return (
-                              <div key={taskIndex}>
-                                <button onClick={() => taskOpenHandler(task)} className="TaskDisplay">{task.taskName}</button>
-                              </div>
-                            );
-                          } else {
-                            return null;
-                          }
-                        })}
-                      </div>
-                    ))}
-                  </div>
-                  </>
-                ))}
-              </div>
-              <div className="Buttons">
-                <button className="btn" onClick={handlePrevMonthClick}>Prev</button>
-                <button className="btn" onClick={handleTodayClick}>Today</button>
-                <button className="btn" onClick={handleNextMonthClick}>Next</button>
-              </div>
-            </>
-          )}
-        </div>
-      );
+            <div className="DaysWeek">
+              {days.map(day => <div className="EachDay">{day}</div>)}
+            </div>
+            <div className="Calendar">
+              {Array.from({ length: Math.ceil(daysInMonthWithPadding.length / 7) }).map((_, weekIndex) => (
+              <>
+                <div key={weekIndex} className="Week">
+                  {daysInMonthWithPadding.slice(weekIndex * 7, (weekIndex + 1) * 7).map((day, dayIndex) => (
+                    <div key={dayIndex} className="Days">
+                      <p>{day}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="Week">
+                  {daysInMonthWithPadding.slice(weekIndex * 7, (weekIndex + 1) * 7).map((day, dayIndex) => (
+                    <div key={dayIndex} className="Tasks">
+                      {tasks.map((task, taskIndex) => {
+                        const taskDate = new Date(task.startDate).getDate();
+                        if (taskDate === day && month == new Date(task.startDate).getMonth() && year == new Date(task.startDate).getFullYear()) {
+                          return (
+                            <div key={taskIndex}>
+                              <button onClick={() => taskOpenHandler(task)} className="TaskDisplay">{task.taskName}</button>
+                            </div>
+                          );
+                        } else {
+                          return null;
+                        }
+                      })}
+                    </div>
+                  ))}
+                </div>
+                </>
+              ))}
+            </div>
+            <div className="Buttons">
+              <button className="btn" onClick={handlePrevMonthClick}>Prev</button>
+              <button className="btn" onClick={handleTodayClick}>Today</button>
+              <button className="btn" onClick={handleNextMonthClick}>Next</button>
+            </div>
+          </>
+        )}
+      </div>
+    );
 }
