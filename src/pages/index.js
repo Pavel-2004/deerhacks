@@ -1,8 +1,7 @@
-import { CalenderTask } from '../components/CalenderTask'
-
+import { MiniCalendar } from '../components/MiniCalendar'
 
 export default function Home() {
   return (
-    <CalenderTask />
+    <MiniCalendar />
   )
 }
