@@ -1,11 +1,10 @@
-// create-section.js
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from "../../../firebase";
 import EventEmitter from 'events';
 
 const workflow = new EventEmitter();
 
-export default function create_section(req, res) {
+export default function create_user(req, res) {
     const description = req.body.description
     const name = req.body.name
 
