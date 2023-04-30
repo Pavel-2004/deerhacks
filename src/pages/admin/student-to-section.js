@@ -3,6 +3,8 @@ import {useState, useEffect} from "react";
 export default function StudentToSection() {
   const [sections, setSections] = useState([])
   const [students, setStudents] = useState([])
+  const [name, setName] = useState("")
+  const [description, setDescription] = useState("")
 
   useEffect(() => {
     fetch("/api/get-sections", {
@@ -65,6 +67,18 @@ export default function StudentToSection() {
     })
   }
 
+  const handleCreateSection = () => {
+    fetch("/api/create-section", {
+      method: 'POST',
+      headers: {
+        'Content-Type' : 'application/json',
+      },
+      body: JSON.stringify({
+        name, description
+      })
+    })
+  }
+
 
   return (
     <div>
@@ -89,6 +103,10 @@ export default function StudentToSection() {
           )
         })
       }
+      <div className={"flex flex-row"}>
+        <input value={name} onChange={e => setName(e.target.value)} placeholder={"Section Name"} />
+        <button onClick={handleCreateSection}></button>
+      </div>
     </div>
   )
 }
