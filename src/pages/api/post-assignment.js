@@ -1,4 +1,3 @@
-// post-assignment.js
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from "../../../firebase";
 import EventEmitter from 'events';
@@ -6,6 +5,12 @@ import EventEmitter from 'events';
 const workflow = new EventEmitter();
 
 export default function post_assignment(req, res) {
+import { collection, addDoc } from "firebase/firestore"; 
+import { db } from "../../../firebase";
+import EventEmitter from 'events';
+const workflow = new EventEmitter();
+
+export default function create_user(req, res) {
     const assigmentName = req.body.assigmentName
     const description = req.body.description
     const dueDate = req.body.dueDate
@@ -35,6 +40,6 @@ export default function post_assignment(req, res) {
     workflow.once("error", (message) => {
         return res.status(200).json({message})
     })
-
+    
     workflow.emit("checkParams")
 }

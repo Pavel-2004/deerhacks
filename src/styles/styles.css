@@ -1,0 +1,75 @@
+.grades-menu {
+    text-align: left;
+    padding: 1.5em;
+    background: #93E5AB;
+    height: 100vh;
+}
+
+.grades-menu > h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00241b;
+}
+
+.course-name {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 1em 0;
+}
+
+.course-name > h2 {
+    font-size: 1.5rem;
+    margin-bottom: .5em;
+    font-weight: bold;
+    text-align: left;
+    color: #00241B;
+}
+
+
+.grades-for-course {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.grade-card {
+    background: #65B891;
+    padding: 1em;
+    border-radius: 1em;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.grade-card > h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.hourly-calendar {
+    background: whitesmoke;
+}
+
+.task-by-interval {
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    transition: 250ms;
+    display: "inline-block";
+    width: 100%;
+}
+
+.interval {
+    display: flex;
+    justify-content: center;
+}
+
+.interval-has-task:hover {
+    cursor: pointer;
+    background: lightgray;
+}
+
