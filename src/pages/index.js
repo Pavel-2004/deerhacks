@@ -1,8 +1,4 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import AssignmentsMenu from '../components/AssignmentsMenu.js'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const assignments = [
