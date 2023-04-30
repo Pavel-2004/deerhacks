@@ -15,7 +15,7 @@ const request = (prompt, callback) => {
     method: 'POST',
     headers: {
       'Content-Type' : 'application/json',
-      'Authorization' : 'Bearer ' + String("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")
+      'Authorization' : 'Bearer ' + String("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")
     },
     body: JSON.stringify(params)
   }
