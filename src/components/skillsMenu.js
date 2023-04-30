@@ -45,13 +45,13 @@ export default function SkillsMenu(props) {
             effectiveness: parseInt(value.effectiveness),
           };
         });
-      
-        console.log(mappedValues);
+
+        props.sendSkills(mappedValues)
       };
       
   
     return (
-      <div className="skills-menu">
+      <div className="skills-menu h-full">
         <h1>Skills Menu</h1>
         {skills.map((skill, skillIndex) => (
           <div className="skills-section" key={skill}>
